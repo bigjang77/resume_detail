@@ -29,4 +29,12 @@ public class Resume {
     private Integer jobId;
     private boolean isMain;
     private Timestamp createdAt;
+
+    private String employeeName;
+    private String employeeBrith;
+    private String employeeSex;
+    private String employeeEmail;
+    private String employeeTel;
+    private String employeeLocation;
+
 }
