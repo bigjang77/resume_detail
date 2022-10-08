@@ -22,15 +22,15 @@
                 </div>
                 <div class="p-2 "><button type="button" class="btn btn-secondary">수정하기</button></div>
             </div>
-            <div class="container p-5 my-5 border" var="employee" items="${employeeList}">
+            <div class="container p-5 my-5 border" var="resume" items="${resume}">
                 <span>
-                    ${employee.employeeName}
-                </span><span> sex, birth</span>
+                    ${resume.employeeName}
+                </span>
+                <span>${resume.employeeSex}, ${resume.employeeBrith}</span>
                 <ul>
-                    <li>이메일 <span>0000@gmail.com</span></li>
-                    <li>휴대폰 <span>000-1111-2222</span></li>
-                    <li>전화번호 <span>000-111-2222</span></li>
-                    <li>주소 <span>부산시 어디구 저기동</span></li>
+                    <li>이메일 <span>${resume.employeeEmail}</span></li>
+                    <li>휴대폰 <span>${resume.employeeTel}</span></li>
+                    <li>주소 <span>${resume.employeeLocation}</span></li>
                 </ul>
             </div>
             </div>
@@ -40,59 +40,29 @@
                 </div>
                 <div class="p-2 "><input type="hidden"></div>
             </div>
-            <div class="container p-5 my-5 border">
+            <div class="container p-5 my-5 border" var="resume" items="${resume}">
                 <span>
                     대학정보입력
                 </span>
                 <div class="mb-3 mt-3">
                     <label class="form-label">학교명</label>
-                    <select class="form">
-                        <option>대학교(4년)</option>
-                        <option>대학교(2년)</option>
-                    </select>
-                </div>
-                <div class="mb-3 mt-3">
-                    <label class="form-label">학교명</label>
-                    <input type="text" class="form" placeholder="Enter university" name="text">
+                    <span>${resume.univName}</span>
                 </div>
 
                 <div class="mb-3 mt-3">
-                    <label class="form-label">지역</label>
-                    <select class="form">
-                        <option>부산</option>
-                        <option>경남</option>
-                        <option>서울</option>
-                    </select>
-                </div>
-                <div class="mb-3 mt-3">
                     <label class="form-label">재학기간</label></br>
-                    <input type="date">
-                    -
-                    <input type="date">
-                    <select class="form">
-                        <option>졸업</option>
-                        <option>재학</option>
-                    </select>
+                    <span>${resume.univStartdate} - ${resume.univEnddate}</span>
                 </div>
                 <div class="mb-3 mt-3">
                     <label class="form-label">전공</label>
-                    <select class="form">
-                        <option>경제/경영</option>
-                        <option>컴퓨터공학</option>
-                        <option>물리학과</option>
-                    </select>
-                    <input type="text" class="form" name="major">
-                    <button>전공 추가하기</button>
+                    <span>${resume.univMajor}</span>
                 </div>
                 <div class="mb-3 mt-3">
                     <label class="form-label">주/야간</label>
-                    <select class="form">
-                        <option>주간</option>
-                        <option>야간</option>
-                    </select>
+                        <span></span>
                     <div class="mb-3 mt-3">
                         <label class="form-label">학점</label>
-                        <input type="text" class="form" name="score">
+                        <span>${resume.univGrade}</span>
                     </div>
                 </div>
             </div>
